@@ -9,7 +9,21 @@
   </head>
   <body>
     <div class="container">
-        <h1>Bus Travel Widget</h1>
+        <h1>Bus Travel Widget</h1><img src="images/images.jpeg">
+          <div class="middle">
+        <div>
+          <input type="radio" class="peak" name="peak" value="peak" />
+          <label for="peak">Peak</label>
+
+          <input type="radio" class="peak" name="peak" value="off-peak" />
+          <label for="off-peak">Off-peak</label>
+        </div>
+        <div>
+          <input type="checkbox" class="checkReturn" name="check" />
+          <label for="check">Return trip</label>
+          <button class="calc">Calculate</button>
+        </div>
+      </div>
       <div class="top">
         <div>
           <label for="points">Please enter points</label>
@@ -32,34 +46,19 @@
         </select>
 
       </div>
-      <div class="middle">
-        <div>
-          <input type="radio" class="peak" name="peak" value="peak" />
-          <label for="peak">Peak</label>
-
-          <input type="radio" class="peak" name="peak" value="off-peak" />
-          <label for="off-peak">Off-peak</label>
-        </div>
-        <div>
-          <input type="checkbox" class="checkReturn" name="check" />
-          <label for="check">Return trip</label>
-          <button class="calc">Calculate</button>
-        </div>
-      </div>
+    
+      <h2>Calculations</h2>
       <div class="calculations">
-        <h2>Calculations</h2>
 
-        <label>Number of single trips: <span class="singleNum">0</span></label>
-        <div>
-          <label>Price per trip (single): <span class="singlePrice">0</span></label>
+          <div>
+        <label>Total single trips: <span class="singleNum">0</span></label>
+          <label>Price trip (single): <span class="singlePrice">0</span></label>
         </div>
 
         <div>
-          <label>Number of return trips: <span class="returnNum">0</span></label>
-        </div>
-
-        <div>
-          <label>Price per trip (return):<span class="returnPrice">0</span></label>
+          <label>Totalreturn trips: <span class="returnNum">0</span></label>
+        
+          <label>Price trip (return):<span class="returnPrice">0</span></label>
         </div>
 
       </div>
