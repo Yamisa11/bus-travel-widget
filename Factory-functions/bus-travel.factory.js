@@ -3,6 +3,8 @@ function BusTravel() {
   var theLocation = 0;
   var amountSingle = 0;
   var amountReturn = 0;
+  var singlePrice = 0;
+  var returnPrice = 0;
 
   function travelPoints(points) {
     //takes input poits as parameter
@@ -53,7 +55,30 @@ function BusTravel() {
       amountReturn = thePoints / 75;
     }
   }
-
+function pricesSingle(){
+    if (theLocation == "Khayelitsha") {
+        singlePrice = 40
+      }
+      if (theLocation == "Dunoon") {
+        singlePrice = 25
+      }
+      if (theLocation == "Plain") {
+        singlePrice = 30
+      }
+      return singlePrice
+}
+function pricesReturn(){
+    if (theLocation == "Khayelitsha") {
+        returnPrice = 80
+      }
+      if (theLocation == "Dunoon") {
+        returnPrice = 50
+      }
+      if (theLocation == "Plain") {
+        returnPrice = 60
+      }
+      return returnPrice
+}
   function getReturnTrips() {
     return Math.floor(amountReturn);
   }
@@ -70,5 +95,7 @@ function BusTravel() {
     getReturnTrips,
     numSingleTrips,
     getSingleTrips,
+    pricesReturn,
+    pricesSingle
   };
 }

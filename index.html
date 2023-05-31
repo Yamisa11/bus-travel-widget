@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Bus Travel Widget</title>
   </head>
   <body>
     <div class="container">
+        <h1>Bus Travel Widget</h1>
       <div class="top">
         <div>
           <label for="points">Please enter points</label>
@@ -18,21 +20,24 @@
             placeholder="e.g 500"
           />
         </div>
-        <select name="location" id="location">
-          <option value="Select" style="font: bold">
+
+        <select class="location">
+
+          <option value="">
             Select start location
           </option>
           <option value="Khayelitsha">Khayelitsha</option>
           <option value="Dunoon">Dunoon</option>
           <option value="Plain">Mitchell's Plain</option>
         </select>
+
       </div>
       <div class="middle">
         <div>
           <input type="radio" class="peak" name="peak" value="peak" />
           <label for="peak">Peak</label>
 
-          <input type="radio" class="peak" name="off=peak" value="off-peak" />
+          <input type="radio" class="peak" name="peak" value="off-peak" />
           <label for="off-peak">Off-peak</label>
         </div>
         <div>
@@ -44,24 +49,23 @@
       <div class="calculations">
         <h2>Calculations</h2>
 
-        <label>Number of single trips: <span class="singleNum"></span></label>
+        <label>Number of single trips: <span class="singleNum">0</span></label>
         <div>
-          <label
-            >Price per trip (single): <span class="singlePrice"></span
-          ></label>
+          <label>Price per trip (single): <span class="singlePrice">0</span></label>
         </div>
+
         <div>
-          <label>Number of return trips: <span class="returnNum"></span></label>
+          <label>Number of return trips: <span class="returnNum">0</span></label>
         </div>
+
         <div>
-          <label
-            >Price per trip (return): <span class="returnPrice"></span
-          ></label>
+          <label>Price per trip (return):<span class="returnPrice">0</span></label>
         </div>
+
       </div>
     </div>
 
     <script src="./Factory-functions/bus-travel.factory.js"></script>
-    <script src="./bus-travel.js"></script>
+    <script src="bus-travel.js"></script>
   </body>
 </html>
