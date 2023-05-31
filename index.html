@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bus Travel Widget</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="top">
-            <div>
-                <label for="points">Please enter points</label>
-                <input type="text" class="topup" class="points" name="points" value="" placeholder="e.g 500"> 
-            </div>
-            <select name="location" id="location">
-                <option value="Select" style="font: bold;">Select start location</option>  
-                <option value="Khayelitsha">Khayelitsha</option>  
-                <option value="Dunoon">Dunoon</option> 
-                <option value="Plain">Mitchell's Plain</option> 
-
-            </select>
-    
-
+      <div class="top">
+        <div>
+          <label for="points">Please enter points</label>
+          <input
+            type="text"
+            class="points"
+            name="points"
+            placeholder="e.g 500"
+          />
         </div>
-        <div class="middle">
-            <div>
-                <input type="radio" class="peak" name="peak" value="peak" >
-                <label for="peak">Peak</label>
-           
-                <input type="radio"  class="peak"  name="off=peak" value="off-peak" >
-                <label for="off-peak">Off-peak</label>
-            </div>
-            <div>
-                <input type="checkbox" class="checkReturn" name="check">
-                <label for="check">Return trip</label>
-                <button>Calculate</button>
-            </div>
+        <select name="location" id="location">
+          <option value="Select" style="font: bold">
+            Select start location
+          </option>
+          <option value="Khayelitsha">Khayelitsha</option>
+          <option value="Dunoon">Dunoon</option>
+          <option value="Plain">Mitchell's Plain</option>
+        </select>
+      </div>
+      <div class="middle">
+        <div>
+          <input type="radio" class="peak" name="peak" value="peak" />
+          <label for="peak">Peak</label>
 
+          <input type="radio" class="peak" name="off=peak" value="off-peak" />
+          <label for="off-peak">Off-peak</label>
         </div>
-        <div class="calculations">
-           <h2>Calculations</h2>
+        <div>
+          <input type="checkbox" class="checkReturn" name="check" />
+          <label for="check">Return trip</label>
+          <button class="calc">Calculate</button>
+        </div>
+      </div>
+      <div class="calculations">
+        <h2>Calculations</h2>
 
-           <label>Number of single trips: <span class="singleNum"></span></label>
-           <div>
-            <label>Price per trip (single): <span class="singlePrice"></span></label>
-           </div>
-           <div>
-            <label>Number of return trips: <span class="returnNum"></span></label>
-           </div>
-           <div>
-            <label>Price per trip (return): <span class="returnPrice"></span></label>
-           </div>
+        <label>Number of single trips: <span class="singleNum"></span></label>
+        <div>
+          <label
+            >Price per trip (single): <span class="singlePrice"></span
+          ></label>
         </div>
+        <div>
+          <label>Number of return trips: <span class="returnNum"></span></label>
+        </div>
+        <div>
+          <label
+            >Price per trip (return): <span class="returnPrice"></span
+          ></label>
+        </div>
+      </div>
     </div>
-    
-</body>
+
+    <script src="./Factory-functions/bus-travel.factory.js"></script>
+    <script src="./bus-travel.js"></script>
+  </body>
 </html>
